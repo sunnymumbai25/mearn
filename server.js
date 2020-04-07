@@ -8,28 +8,28 @@ const profile = require('./routes/api/profile');
 const posts = require('./routes/api/posts');
 
 const app = express();
-const cors = require("cors");
+// const cors = require("cors");
 
 
 
-app.use(cors());
+// app.use(cors());
 
-app.use(function(req, res, next) {
-res.setHeader("Access-Control-Allow-Origin", "*");
-res.setHeader("Access-Control-Allow-Credentials", "true");
-res.setHeader(
-   "Access-Control-Allow-Methods",
-   "GET,HEAD,OPTIONS,POST,PUT,DELETE"
-);
-res.setHeader(
-   "Access-Control-Allow-Headers",
-   "Origin,Cache-Control,Accept,X-Access-Token ,X-Requested-With, Content-Type, Access-Control-Request-Method"
-);
-if (req.method === "OPTIONS") {
-return res.status(200).end();
-}
-next();
-});
+// app.use(function(req, res, next) {
+// res.setHeader("Access-Control-Allow-Origin", "*");
+// res.setHeader("Access-Control-Allow-Credentials", "true");
+// res.setHeader(
+//    "Access-Control-Allow-Methods",
+//    "GET,HEAD,OPTIONS,POST,PUT,DELETE"
+// );
+// res.setHeader(
+//    "Access-Control-Allow-Headers",
+//    "Origin,Cache-Control,Accept,X-Access-Token ,X-Requested-With, Content-Type, Access-Control-Request-Method"
+// );
+// if (req.method === "OPTIONS") {
+// return res.status(200).end();
+// }
+// next();
+// });
 
 // Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
